@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dexerto Brand Guidelines</title>
+    <style>
+        @font-face {
+          src: url("./fonts/Kanit-Medium.ttf");
+          font-family: "Kanit";
+          font-weight: 400;
+        }
+        @font-face {
+          src: url("./fonts/Kanit-Bold.ttf");
+          font-family: "Kanit";
+          font-weight: 700;
+        }
+        @font-face {
+          src: url("./fonts/Lato-Light.ttf");
+          font-family: "Lato";
+          font-weight: 300;
+        }
+        @font-face {
+          src: url("./fonts/Lato-Regular.ttf");
+          font-family: "Lato";
+          font-weight: 400;
+        }
+        @font-face {
+          src: url("./fonts/Lato-Bold.ttf");
+          font-family: "Lato";
+          font-weight: 700;
+        }
+        @font-face {
+          src: url("./fonts/Devant-Medium.ttf");
+          font-family: "Devant Pro";
+          font-weight: 400;
+        }
+        
+        body { font-family: 'Kanit', sans-serif; color: #232323; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        a { color: #232323; font-weight: 400; }
+        p, li, a { font-family: 'Lato', sans-serif; }
+        p { font-size: 19px; }
+        h2 { font-size: 44px; line-height: 52px;}
+        ul { list-style: none; position: relative; }
+        li { color: #232323;}
+        li::before { content: "+"; padding-right: 8px; position:absolute; left: -16px; }
+        .uppercase { text-transform: uppercase; }
+        .italic { font-style: italic; }
+        .bold { font-weight: bold; }
+        .container { width: 960px; margin: 0 auto; }
+        .centered { display: flex; align-items: center; justify-content: center; height: 100%; }
+        .vertically-centered { display: flex; align-items: center; height: 100%; }
+        .horizontally-centered { display: flex; align-items: center; height: 100%; }
+        .text-white { color: #edeff1; }
+        .section-container { display: flex; }
+        .padding-left-50 { padding-left: 50px; }
+        .container-left { width: 370px; padding-right:30px; }
+        .container-right { width: 540px; }
+        .download-section a { color: #232323; text-decoration:none; font-size: 19.8px; }
+        .download-section a:hover { text-decoration: underline; }
+        .download-section div { font-size: 19.8px; font-weight: 300; }
+        @media (max-width: 960px) {
+            .section-container { flex-direction: column; }
+        }
+
+        #top-nav { background: rgb(238, 239, 241); height: 46px; }
+        .nav-container { height: 100%; }
+        .title-yellow { font-family: 'Lato', sans-serif; font-size: 42px; line-height: 42px; font-weight: 400; color: #ffd310; }
+        .title-white { font-size: 60px; line-height: 60px; font-weight: 700; color: #edeff1; }
+        #header { height: 580px; background: url('./images/header-background.gif'); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; background-color: #161616; }
+        .header-text-container { margin-left: 24px; }
+        #section-values { background: #edeff1; height: 280px; position: relative; overflow: hidden; }
+        .values-text-image { width: 700px; position: absolute; bottom: -100px; left: -20px; opacity: 0; }
+        .visible { opacity: 1; }
+        .values-container { position: relative; display: flex; align-items: center; justify-content: space-between; align-items: flex-start; padding: 50px 40px; }
+        .value { display: flex; flex-direction: column; align-items: center; max-width: 250px; text-align: center; }
+        .value h2 { font-size: 44px; }
+        .value p { font-size: 20px; }
+        #section-logo { background: #232323; color: #edeff1; height: 440px; }
+        .logo-container { height: 100%; padding-top: 60px; padding-bottom: 60px; display: flex; justify-content: space-between; }
+        .logo-container h2 { margin-bottom: 24px; }
+        .logo-container p { padding-right: 10%; }
+        .logo-left { width: 60%; }
+        .logo-right { width: 40%; text-align: center; padding-top: 30px; }
+        #section-text { background-color: #edeff1;  }
+        .italic-text-container { background-image: url('./images/curious-text.gif'); background-size: contain; background-repeat: no-repeat; }
+        #section-text p { padding: 60px 0; font-size: 42px; line-height: 64px; font-weight: 700; text-align: center; }
+        .section-logos { height: 232px; display: flex; }
+        .section-logos-1 { background: #232323; color: #edeff1; }
+        .section-logos-2 { padding: 60px 0; }
+        .section-logos-1-left { height: 100%; margin: 0 auto; display: flex; align-items: center; position: relative; }
+        img.logo-1-left { height: 131px; }
+        .page-intersect-h { position: absolute; bottom: -13px; left: 50%; transform: translateX(-50%); }
+        .section-logos-2-left { margin: 0 auto; height: 131px; }
+        .section-logos-1-right { margin: 0 auto; height: 100%; display: flex; align-items: center; position: relative; }
+        img.logo-1-right { height: 64px; }
+        .page-intersect-v { position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%); }
+        .section-logos-2-right { margin: 0 auto; height: 64px; }
+        .section-logos-1-container { position: relative; display: flex; justify-content: space-between; align-items: center; padding: 0 30px; }
+        .section-logos-2-container { display: flex; justify-content: space-between; align-items: center; padding: 0 30px;  }
+        #section-rules { margin-top: 60px; }
+        .section-rules-intro { display: flex; justify-content: space-between; }
+        .section-rules-intro p { width: 300px; margin-top: 30px; margin-bottom: 20px; }
+        .section-rules-intro div { font-size: 20px; }
+        .section-rules-container { margin: 20px 0 60px 0; }
+        .rules-text { list-style: none; font-size: 19.8px; line-height: 28px; }
+        .rules-text .rule { display: flex; justify-content: space-between; margin-bottom: 24px; }
+        .rules-text li { height: 190px; max-width: 340px; }
+        .rules-gifs { display: flex; flex-direction: column; }
+        .rule img { width: 361px; height: 191px; }
+        .downloads-section { position: relative; overflow: hidden; height: 120px; }
+        .downloads-backdrop { -webkit-clip-path:polygon(0 33%, 100% 0, 100% 100%, 0% 100%); clip-path:polygon(0 33%, 100% 0, 100% 100%, 0% 100%); height: 100%; background: #ff3d65; position: absolute; width: 100%; left: 0; bottom: 0; }
+        .downloads-container { position: relative; height: 100%; }
+        .downloads-section img { position: absolute; bottom: -20px; left: -20px; width: 500px;}
+        .downloads-section-links { position: absolute; right: 30px; bottom: 12px; display: flex; align-items: center; }
+        .downloads-section-links a { color: #edeff1; text-decoration: none; font-family: 'Lato', sans-serif; font-weight: 400; font-size: 19.8px; }
+        .downloads-section-links a:hover { text-decoration: underline; }
+        .downloads-section-links-divider { background: #ffd310; height: 20px; width: 2px; margin: 0 20px; }
+        #section-ips { background: #232323; color: #edeff1; height: 425px; display: flex; align-items: center; }
+        .ips-container {  }
+        .ips-header { text-align: center; margin-bottom: 20px; color: #eeeff1; font-size: 19.8px; font-weight: 400; font-family: 'Lato'; }
+        .ips-top, .ips-bottom { display:flex; align-items: center; width: 100%; }
+        .ips-top div, .ips-bottom div { text-align: center; }
+        .ips-top { margin-bottom: 30px; }
+        .ips-top div, .ips-bottom div { width: 25%; }
+        #section-typography {}
+        #section-typography h3 { color: #e0005e; }
+        #section-typography li { font-size: 19.8px; margin-bottom: 20px; }
+        #section-typography .large-text { font-size: 80px; line-height: 110px; }
+        .typography-intro-text { margin: 60px 0; width: 330px; }
+        .typography-top { display: flex; margin-bottom: 30px; padding-left: 50px; }
+        .typography-bottom { display: flex; padding-left: 50px; }
+        .typography-option { margin: 0 20px; }
+        .typography-text { font-size: 14px; line-height: 16px; }
+        #kanit-medium h3, #kanit-medium div { font-family: 'Kanit', sans-serif; font-weight: 400; }
+        #kanit-bold h3, #kanit-bold div { font-family: 'Kanit', sans-serif; font-weight: 700; }
+        #devant-pro h3, #devant-pro div { font-family: 'Devant Pro', sans-serif; font-weight: 400; }
+        #devant-pro { margin-top: 7px; }
+        #devant-pro div.large-text { margin-top: 7px; line-height: 103px; }
+        #lato-regular h3, #lato-regular div { font-family: 'Lato', sans-serif; font-weight: 400; }
+        #lato-light h3, #lato-light div { font-family: 'Lato', sans-serif; font-weight: 300; }
+        #section-font-download { display: flex; }
+        .download-container { display: flex; position: relative; margin-top: 50px; margin-bottom: 50px; }
+        #section-color {  }
+        #section-color p { margin: 20px 0; width: 40%; }
+        .color-container {  width: 960px; margin-left: auto; margin-right: auto; }
+
+        .color-square-full-height { height: 289px; }
+        .color-square-full-width { width: 289px; }
+        .color-square-half-height { height: 144.5px; }
+        .color-square-half-width { width: 144.5px; }
+
+        .color-yellow { background:#ffd310; }
+        .color-dark { background:#232323; }
+        .color-grey { background:#eeeff1;  }
+        .color-white { background: #ffffff; }
+        .color-black { background:#000000; }
+        .color-teal { background:#18cbe8; }
+        .color-pink { background:#e0005e; }
+        .color-blue-1 { background:#2c5d83; }
+        .color-blue-2 { background: #18cbe8; }
+        .color-blue-3 { background: #60e4f9; }
+        .color-red-1 { background: #b5084d; }
+        .color-red-2 { background: #e0005e; }
+        .color-red-3 { background: #f95198; }
+        .color-blue { background:#3d5af1; }
+        .color-purple { background:#7d1ed8; }
+        .color-green { background: #038764; }
+        .colors-text { padding: 12px; font-size: 12px; line-height: 12px; }
+        .colors-squares-top-right { display: flex; flex-direction: column; width:289px; height:289px; }
+        .colors-squares-bottom-right { display:flex; flex-direction: column; width:289px; height:289px; }
+        #section-iconography {  }
+        #section-iconography h2 { margin-bottom: 20px; }
+        .iconography-gifs { display: flex; }
+        .iconography-gifs img { width: 180px; height: 180px; }
+        .icon-examples { margin: 24px; }
+        .icon-examples img { width: 100%; margin-bottom: 12px; }
+        #section-photography {  }
+        .photography-container h2 { margin-bottom: 20px; }
+        .photography-container p { margin-bottom: 80px; }
+        .photography-container .subheader-text { font-weight: 700; font-size: 19.8px; font-family: 'Lato', sans-serif; }
+        .photography-images { display: flex; flex-wrap: wrap; }
+        .photography-images img { width: 180px; height: auto; }
+        #section-texture {  }
+        #section-texture h2 { margin-bottom: 20px; }
+        #section-texture .texture-subtext { font-weight: 700; font-size: 19.8px; font-family: 'Lato'; margin-top: 20px; }
+        .texture-images { display: flex; flex-wrap: wrap; }
+        .texture-images img { width: 180px; height: auto; }
+        #section-editing {  }
+        #section-editing h2 { margin-bottom: 20px; }
+        #section-editing ol { margin-top: 24px; padding-right: 20px; }
+        #section-editing li { margin-left: 16px; font-size: 19.8px; margin-bottom: 16px; }
+        .editing-images img { width: 100%; margin-bottom: 24px; }
+        #section-social {  }
+        #section-social h2 { margin-bottom: 20px; font-size: 34.6px; line-height: 42px; }
+        .social-images img { width: 100%; margin-bottom: 24px; }
+        .section-questions { background: #232323; color: #eeeff1; width: 100%; height: 200px; font-size: 13.8px; line-height: 15.4px;}
+        .section-questions img { margin-left: -30px; }
+        .questions-text { width: 50%; }
+        .translate-text { transform: translateY(-120px); }
+        .translate-text-texture { margin-top: 60px; margin-bottom: 0px; }
+        footer { background: #edeff1; }
+        .footer-container { display: flex; justify-content: space-between; font-size: 13.8px; }
+        .footer-container a, .footer-container div { color: #0c0c0c; }
+        .footer-left { display: flex; align-items: center; }
+        .footer-left img { margin-right: 24px; }
+        .footer-right { display: flex; align-items: center; }
+        .footer-right a { margin-left: 30px; text-decoration: none; }
+        .footer-right a:hover { text-decoration: underline; }
+
+        .hidden { opacity: 0; }
+        .title-text-1 { transform: translateY(60px); }
+        .title-text-2 { transform: translateY(70px); }
+        .title-text-3 { transform: translateY(80px); }
+        .title-text-4 { transform: translateY(90px); }
+        .title-text-5 { transform: translateY(100px); }
+        .title-text-1-animation { animation: slideFadeIn1 1s both; }
+        .title-text-2-animation { animation: slideFadeIn2 1s both; }
+        .title-text-3-animation { animation: slideFadeIn3 1s both; }
+        .title-text-4-animation { animation: slideFadeIn4 1s both; }
+        .title-text-5-animation { animation: slideFadeIn5 1s both; }
+        @keyframes slideFadeIn1 {
+            0% { opacity: 0; transform: translateY(60px); }
+            100% { opacity: 1; transform: translateY(0px); }
+        }
+        @keyframes slideFadeIn2 {
+            0% { opacity: 0; transform: translateY(70px); }
+            100% { opacity: 1; transform: translateY(0px); }
+        }
+        @keyframes slideFadeIn3 {
+            0% { opacity: 0; transform: translateY(80px); }
+            100% { opacity: 1; transform: translateY(0px); }
+        }
+        @keyframes slideFadeIn4 {
+            0% { opacity: 0; transform: translateY(90px); }
+            100% { opacity: 1; transform: translateY(0px); }
+        }
+        @keyframes slideFadeIn5 {
+            0% { opacity: 0; transform: translateY(100px); }
+            100% { opacity: 1; transform: translateY(0px); }
+        }
+
+        .values-text { opacity: 0; transform: translateY(80px); }
+        .values-text-animation { animation: slideFadeInValue 1s both; }
+        @keyframes slideFadeInValue {
+            0% { opacity: 0; transform: translateY(80px); }
+            100% { opacity: 1; transform: translateY(0px); }
+        }
+
+        .logo-image { transform: scale(.5); transform-origin: 50% 50%; }
+        .logo-image-animation { animation: growFadeInLogo 2s both; }
+        @keyframes growFadeInLogo {
+            0% { transform: scale(.5); }
+            100% { transform: scale(1); }
+        }
+
+        .fade-in-logo { opacity: 0; transform: scale(.8); transform-origin: 50% 50%; }
+        .fade-in-logo-animation { animation: fadeInGrow 1s both; }
+        @keyframes fadeInGrow {
+            0% { opacity: 0; transform: scale(.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .downloads-background { transform: translateY(100%); }
+        .downloads-text { transform: translateY(100%); }
+        .downloads-links { opacity: 0; }
+        .downloads-background-animation { animation: slideInUp 2s both; }
+        .downloads-text-animation { animation: slideInUp 2s both;  }
+        .downloads-links-animation { animation: fadeIn 2s both; }
+        @keyframes slideInUp {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .ip-logo { opacity: 0; }
+        .ip-logo-1 { width: 137px; }
+        .ip-logo-2 { width: 118px; }
+        .ip-logo-3 { width: 180px; }
+        .ip-logo-4 { width: 139px; }
+        .ip-logo-5 { width: 218px; }
+        .ip-logo-6 { width: 187px; }
+        .ip-logo-7 { width: 162px; }
+        .ip-logo-8 { width: 205px; }
+        .ip-logo-animation { animation: fadeIn 2s both; }
+
+        .font-demo { transform: translateY(-100px); opacity: 0; }
+        .font-demo-animation { animation: slideFadeInDown 1s both; }
+        @keyframes slideFadeInDown {
+            0% { opacity: 0; transform: translateY(-100px); }
+            100% { opacity: 1; transform: translateY(0px); }
+        }
+
+        .color-square { opacity: 0; }
+        .color-square-animation { animation: fadeIn 1s both; }
+
+        .iconography-gif { opacity: 0; }
+        .iconography-gif-animation { animation: fadeIn 1s both; }
+
+        .fade-in { animation: fadeIn 1s both; }
+        .photography-row-1, .photography-row-2, .photography-row-3, .photography-row-4, .photography-row-5 { opacity: 0; }
+        .texture-row-1, .texture-row-2, .texture-row-3, .texture-row-4 { opacity: 0; }
+
+        .editing-image-1, .editing-image-2, .editing-image-3 { opacity: 0; }
+        .social-image-1 { opacity: 0; }
+
+        @media (max-width: 960px) {
+            /* .container { width: 92%; margin-left: 4%; margin-right: 4%; } */
+            .container { width: 100%; }
+            .container-left { width: 100%; padding-right: 0px; }
+            #header { height: 420px; }
+            .padding-left-50 { padding-left: 0px; }
+            .title-yellow { font-size: 28px; line-height: 28px; }
+            .title-white { font-size: 42px; line-height: 42px; }
+            #section-values { height: auto;}
+            .values-container { flex-direction: column; align-items: center; }
+            .value { margin-bottom: 20px; }
+            .value h2 { font-size: 34px; }
+            .value p { font-size: 16px; }
+            #section-logo { height: auto; }
+            .logo-container { flex-direction: column; align-items: center; }
+            .logo-container p { padding: 0; }
+            .logo-left, .logo-right { width: 92%; margin-left: 4%; margin-right: 4%; }
+            .logo-right { padding-top: 60px; }
+            .logo-image { max-width: 60%; }
+            .italic-text-container {
+                background-image: url('./images/curious-text.gif');
+                background-repeat: no-repeat;
+                background-position: 50% 100%;
+                width: 92%; margin-left: 4%; margin-right: 4%;
+            }
+            #section-text p { font-size: 32px; line-height: 44px; }
+            .section-logos { height: auto; }
+            .section-logos-2 { padding: 0; }
+            .section-logos-1-container, .section-logos-2-container { flex-direction: column; margin: 40px 0; }
+            .section-logos-1-left, .section-logos-2-left { margin-bottom: 60px; }
+            .page-intersect-h, .page-intersect-v { display: none; }
+            .section-rules-container { margin-top: 60px; }
+            .section-rules-intro { flex-direction: column; align-items: center; }
+            .rules-text .rule { flex-direction: column; align-items: center; }
+            .rules-gif-0, .rule { margin-top: 40px; }
+            .rules-text { width: 360px; margin-left: auto; margin-right: auto; }
+            .rules-text li { height: auto; margin-bottom: 24px; }
+            .values-text-image { display: none; }
+            .downloads-section img { width: 360px; bottom: -12px; }
+            .downloads-section-links { bottom: 42px; }
+            .downloads-section-links a { font-size: 14px; }
+            .downloads-section-links-divider { margin: 0 10px; }
+            #section-ips { height: auto; padding: 40px 0; }
+            .ips-header { font-size: 16px; }
+            .ip-logo-1 { width: 102.75px; }
+            .ip-logo-2 { width: 88px; }
+            .ip-logo-3 { width: 135px; }
+            .ip-logo-4 { width: 104.25px; }
+            .ip-logo-5 { width: 163.5px; }
+            .ip-logo-6 { width: 140.25px; }
+            .ip-logo-7 { width: 121.5px; }
+            .ip-logo-8 { width: 153.75px; }
+            .typography-container { display: flex; flex-direction: column; align-items: center; }
+            .typography-rules { width: 92%; margin-left: 4%; margin-right: 4%; }
+            .section-container { align-items: center; }
+            .color-container { width: 100%; display: flex; flex-direction: column; align-items: center; }
+            .color-intro-text { width: 92%; margin-left: 4%; margin-right: 4%; }
+            .download-section { width: 92%; margin-left: 4%; margin-right: 4%; }
+            
+            #section-color p { width: 100%; }
+            .color-square-full-height { height: 33.33vw; }
+            .color-square-full-width { width: 33.33vw; }
+            .color-square-half-height { height: 16.67vw; }
+            .color-square-half-width { width: 16.67vw; }
+            .colors-squares-top-right, .colors-squares-bottom-right  { height: 33.33vw; width: 33.33vw; }
+            .typography-intro-text { width: 92%; margin-left: 4%; margin-right: 4%; }
+            .typography-top { margin-top: 40px; }
+            .typography-bottom, .typography-top { padding-left: 0px; }
+            .iconography-text, .iconography-info { width: 92%; margin-left: 4%; margin-right: 4%; }
+            .photography-container { width: 92%; margin-left: 4%; margin-right: 4%; margin-bottom: 20px; }
+            .photography-container h2 { font-size: 34px; }
+            .photography-container p { margin-bottom: 20px; }
+            .texture-text, .editing-text, .social-text  { width: 92%; margin-left: 4%; margin-right: 4%; margin-bottom: 20px; }
+            footer { padding: 30px 0; }
+            .footer-right { flex-direction: column; align-items: flex-start; }
+            .footer-right a { margin-bottom: 5px; }
+            .section-container { width: 100%; }
+            .iconography-info { display: flex; flex-direction: column; align-items: center;}
+            .iconography-gifs { margin-top: 20px; }
+            .iconography-gifs img { width: 90px; height: 90px; }
+            .typography-top { display: flex; flex-wrap: wrap; }
+            .questions-container { width: 92%; margin-left: 4%; margin-right: 4%; }
+            .questions-text { width: 100%; }
+            .footer-left { flex-direction: column; }
+            .footer-left img { margin-bottom: 10px; }
+            .footer-container { width: 92%; margin-left: 4%; margin-right: 4%; }
+            .translate-text { transform: translateY(0px); }
+        }
+        @media (max-width: 720px) {
+            .title-yellow { font-size: 22px; line-height: 22px; }
+            .title-white { font-size: 30px; line-height: 34px; }
+            .ip-logo-1 { width: 51.375px; }
+            .ip-logo-2 { width: 44px; }
+            .ip-logo-3 { width: 67.5px; }
+            .ip-logo-4 { width: 52.125px; }
+            .ip-logo-5 { width: 81.75px; }
+            .ip-logo-6 { width: 70.125px; }
+            .ip-logo-7 { width: 60.75px; }
+            .ip-logo-8 { width: 76.875px; }
+
+        }
+        @media (max-width: 540px) {
+            .title-yellow { font-size: 14px; line-height: 16px; }
+            .title-white { font-size: 20px; line-height: 24px; }
+            .texture-images img { width: 33.33vw; height: 33.33vw; }
+            .texture-images-container { width: 100%; }
+            .photography-images img { width: 33.33vw; height: 33.33vw; }
+            .container-right { width: 100%; }
+            .colors-text { font-size: 7px; padding: 4px; }
+        }
+        @media (max-width: 420px) {
+            .rules-text { width: 100%; height: auto; }
+            .rules-text li { width: 92%; margin-left: 4%; margin-right: 4%; }
+            .rule img { height: auto; }
+            .rules-gif-0, .rule img { width: 92%; margin-left: 4%; margin-right: 4%; }
+            .icon-examples img { display: none; }
+            li::before { content: ""; }
+            #devant-pro { margin-top: 40px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top-nav">
+        <div class="container nav-container"><img src="./images/top-logo.png"></div></div>
+    <div id="header">
+        <div class="container vertically-centered">
+            <div class="header-text-container">
+                <div class="uppercase hidden title-text title-yellow title-text-1">An Award-Winning</div>
+                <div class="uppercase hidden title-text title-white title-text-2">Media Company</div>
+                <div class="uppercase hidden title-text title-yellow title-text-3">At The Forefront Of</div>
+                <div class="uppercase hidden title-text title-white title-text-4">Gaming Culture</div>
+                <div class="uppercase hidden title-text title-yellow title-text-5">And ESports.</div>
+            </div>
+        </div>
+    </div>
+    <section id="section-values">
+        <div class="container">
+            <div class="values-container">
+                <img class="values-text-image values-image" src="./images/values-text.png" />
+                <div class="value values-text"><h2 class="uppercase">Bold</h2><p>We make a splash</p></div>
+                <div class="value values-text"><h2 class="uppercase">Challenging</h2><p>We dare to be different</p></div>
+                <div class="value values-text"><h2 class="uppercase">Inspiring</h2><p>We elevate the experience</p></div>
+            </div>
+        </div>
+    </section>
+    <section id="section-logo">
+        <div class="container logo-container padding-left-50">
+            <div class="logo-left"><h2 class="uppercase">The Dexerto Logo</h2><p>The Dexerto mark - aka. "shield" - has been imprinted within the collective conscious of esports and gaming fans across the globe. Our iconic shield has come to represent a tonal quality that reflects the very fandom we create content for - it's excitable, curious, opinionated and authoritative - purveyed by editorial across written and video mediums. The shield is our most important brand asset and should be used with reverence and care.</p></div>
+            <div class="logo-right"><img class="logo-image" src="./images/main-logo.png"/></div>
+        </div>
+    </section>
+    <section id="section-text">
+        <div class="container italic-text-container">
+            <p class="italic">Dexerto champions esports & gaming's biggest moments and the personalities that shape them.</p>
+        </div>
+    </section>
+    <section class="section-logos section-logos-1">
+        <div class="container section-logos-1-container">
+            <div class="section-logos-1-left">
+                <img class="logo-1-left-image fade-in-logo fade-in-logo-1" src="./images/logo-vertical-dark.png" />
+                <div class="page-intersect-v"><img src="./images/Page-intersect-V.png"/></div>
+            </div>
+            <div class="section-logos-1-right">
+                <img class="logo-1-right-image fade-in-logo fade-in-logo-1" src="./images/logo-horizontal-dark.png" />
+                <div class="page-intersect-h"><img src="./images/Page-intersect-H.png"/></div>
+            </div>
+        </div>
+    </section>
+    <section class="section-logos section-logos-2">
+        <div class="container section-logos-2-container">
+            <div class="section-logos-2-left">
+                <img class="fade-in-logo fade-in-logo-2" src="./images/logo-vertical.png" />
+            </div>
+            <div class="section-logos-2-right">
+                <img class="section-logos-2-right fade-in-logo fade-in-logo-2" src="./images/logo-horizontal.png" />
+            </div>
+        </div>
+    </section>
+    <section id="section-rules">
+        <div class="container padding-left-50">
+            <div class="section-rules-intro">
+                <div>
+                    <h2 class="uppercase">Rules</h2>
+                    <p>We have all seen basic branding rules. The same apply here.</p>
+                    <div>Legibility is king.</div>
+                </div>
+                <div>
+                    <img class="rules-gif-0" src="./images/rule-0.gif" />
+                </div>
+            </div>
+            <div class="section-rules-container">
+                <ul class="rules-text">
+                    <div class="rule">
+                        <li>Keep the shield...as a shield around the logo, to protect it from garbage.</li>
+                        <img class="rules-gif-1" src="./images/rule-1.gif" />
+                    </div>
+                    <div class="rule">
+                        <li>Don't place dark logos on dark backgrounds...and vice versa. Unless it looks really cool.</li>
+                        <img class="rules-gif-2" src="./images/rule-2.gif" />
+                    </div>
+                    <div class="rule">
+                        <li>Don't place the logo over images that cause blatant legibility issues.</li>
+                        <img class="rules-gif-3" src="./images/rule-3.gif" />
+                    </div>
+                    <div class="rule">
+                        <li>
+                            <div>Don't change the color of the logo outside of the light and dark variations.</div>
+                            <span>*Some exclusions may apply</span>
+                        </li>
+                        <img class="rules-gif-4" src="./images/rule-4.gif" />
+                    </div>
+                    <div class="rule">
+                        <li>Use common sense. No drop-shadows, no stroke and for god sake, no bevel.</li>
+                        <img class="rules-gif-5" src="./images/rule-5.gif" />
+                    </div>
+                </ul>
+           
+            </div>
+
+        </div>
+    </section>
+    <section>
+        <div class="downloads-section">
+            <div class="downloads-backdrop downloads-background"></div>
+                <img src="images/downloads-text.png" class="downloads-text" />
+                <div class="container downloads-container">
+                    <div class="downloads-section-links downloads-links">
+                        <a href="https://drive.google.com/drive/folders/1Lde1_DvKSWQltC-tHD-6_-l69tpgTPzK" target="_blank">All</a>
+                        <div class="downloads-section-links-divider"></div>
+                        <a href="https://drive.google.com/drive/folders/1u-9oAEWajErHyVuneBu-nU0eP_GBkljr" target="_blank">Print</a>
+                        <div class="downloads-section-links-divider"></div>
+                        <a href="https://drive.google.com/drive/folders/11Bx4kiGz9jWFG8uVpMqeFJhuJWwhdTMb" target="_blank">Screen PNG</a>
+                        <div class="downloads-section-links-divider"></div>
+                        <a href="https://drive.google.com/drive/folders/1HMt6sbjocmljVcHjD1Tuk8gz7A1dbD-O" target="_blank">Illustrator</a>
+                    </div>
+                </div>
+  
+        </div>
+    </section>
+    <section id="section-ips">
+        <div class="container ips-container">
+            <div class="ips-header">Other IP's</div>
+            <div class="ips-top">
+                <div><img class="ip-logo ip-logo-1" src="./images/logo-1-originals.png" /></div>
+                <div><img class="ip-logo ip-logo-2" src="./images/logo-2-alpha-intel.png" /></div>
+                <div><a href="https://drive.google.com/file/d/19MDEOCtlUhJtEVcAmhXpBuUTUYx-GZUp/view?usp=sharing" target="_blank"><img class="ip-logo ip-logo-3" src="./images/logo-3-charlie-intel.png" /></a></div>
+                <div><a href="https://drive.google.com/file/d/1V9U_PNG85I7rFGbewK3lHz_j0voE7J6x/view?usp=sharing" target="_blank"><img class="ip-logo ip-logo-4" src="./images/logo-4-the-jungle.png" /></a></div>
+            </div>
+            <div class="ips-bottom">
+                <div><img class="ip-logo ip-logo-5" src="./images/logo-5-curveball.png" /></div>
+                <div><img class="ip-logo ip-logo-6" src="./images/logo-6-pop-flash.png" /></div>
+                <div><img class="ip-logo ip-logo-7" src="./images/logo-7-reverse-sweep.png" /></div>
+                <div><a href="https://drive.google.com/file/d/1n5Mx0yGFvIS-UldBHSVWU_0hv2ECxgmX/view?usp=sharing" target="_blank"><img class="ip-logo ip-logo-8" src="./images/logo-8-influenced.png" /></a></div>
+            </div>
+        </div>
+    </section>
+    <section id="section-typography">
+        <div class="container typography-container padding-left-50">
+            <div class="typography-intro-text">
+                <h2 class="uppercase" style="margin-bottom:30px;">Typography</h2>
+                <p>Kanit and Lato is to be used in tandem for most applications. Using obvious hierarchical methods of bold and medium in headlines and regular and light to be used within body copy. Within video and specialty composites: Devant Pro can be used as a specialty font to add neccesary flare.</p>
+            </div>
+            <div class="section-container">
+                <ul class="container-left typography-rules">
+                    <li>Kanit for headlines, subhead and body copy.</li>
+                    <li>Don't stretch type horizontally or vertically.</li>
+                    <li>Kerning and tracking to be used in moderation. Don't space too tightly or loosely.</li>
+                    <li>Avoid the use of all caps for body copy.</li>
+                    <li>Avoid using more than 3 type sizes per page.</li>
+                    <li>Condensed font to be used with moderation. Mostly for video or avatars.</li>
+                    <li>Maintain branded fonts throughout all works.</li>
+                </ul>
+                <div class="container-right typography-demos">
+                    <div class="typography-top">
+                        <div class="typography-option font-demo" id="kanit-bold">
+                            <h3>Kanit Bold</h3>
+                            <div class="large-text">Aa</div>
+                            <div class="typography-text">ABCDEFGHIJKLMN</div>
+                            <div class="typography-text">OPQRSTUVWXYZ</div>
+                            <div class="typography-text">abcdefghijklmnop</div>
+                            <div class="typography-text">qrstuvwxyz</div>
+                            <div class="typography-text">123456789!@$&</div>
+                        </div>
+                        <div class="typography-option font-demo" id="kanit-medium">
+                            <h3>Kanit Medium</h3>
+                            <div class="large-text">Aa</div>
+                            <div class="typography-text">ABCDEFGHIJKLMN</div>
+                            <div class="typography-text">OPQRSTUVWXYZ</div>
+                            <div class="typography-text">abcdefghijklmnop</div>
+                            <div class="typography-text">qrstuvwxyz</div>
+                            <div class="typography-text">123456789!@$&</div>
+                        </div>
+                        <div class="typography-option font-demo" id="devant-pro">
+                            <h3 class="uppercase">Devant Pro</h3>
+                            <div class="large-text">Aa</div>
+                            <div class="typography-text">ABCDEFGHIJKLMN</div>
+                            <div class="typography-text">OPQRSTUVWXYZ</div>
+                            <div class="typography-text">abcdefghijklmnop</div>
+                            <div class="typography-text">qrstuvwxyz</div>
+                            <div class="typography-text">123456789!@$&</div>
+                        </div>
+                    </div>
+                    <div class="typography-bottom">
+                        <div class="typography-option font-demo" id="lato-regular">
+                            <h3>Lato Regular</h3>
+                            <div class="large-text">Aa</div>
+                            <div class="typography-text">ABCDEFGHIJKLMN</div>
+                            <div class="typography-text">OPQRSTUVWXYZ</div>
+                            <div class="typography-text">abcdefghijklmnop</div>
+                            <div class="typography-text">qrstuvwxyz</div>
+                            <div class="typography-text">123456789!@$&</div>
+                        </div>
+                        <div class="typography-option font-demo" id="lato-light">
+                            <h3>Lato Light</h3>
+                            <div class="large-text">Aa</div>
+                            <div class="typography-text">ABCDEFGHIJKLMN</div>
+                            <div class="typography-text">OPQRSTUVWXYZ</div>
+                            <div class="typography-text">abcdefghijklmnop</div>
+                            <div class="typography-text">qrstuvwxyz</div>
+                            <div class="typography-text">123456789!@$&</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-font-download" class="download-section">
+        <div class="container download-container padding-left-50">
+            <div>
+                <h3 class="uppercase bold">Download</h3>
+                <div>
+                    <a href="https://fonts.google.com/specimen/Kanit" target="_blank">Kanit</a>
+                </div>
+                <div>
+                    <a href="https://fonts.google.com/specimen/Lato" target="_blank">Lato</a>
+                </div>
+                <div>
+                    <a href="https://drive.google.com/drive/folders/1Vo_4w1lWeV-U9Q3Ny7h1MNDarkVveVjC" target="_blank">Devant Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-color">
+        <div class="color-container padding-left-50">
+            <div class="color-intro-text">
+                <h2 class="uppercase">Color</h2>
+                <p>Dexerto's core colors are yellow,
+                    dark and light grey. When in
+                    doubt, use these as your north
+                    star. However, vellow does not
+                    always contrast well on all
+                    elements. In these circumstances
+                    please substitute yellow and use
+                    our pink or teal tertiary colors.
+                    There are lighter and darker
+                    renditions for even trickier
+                    situations but those variants are
+                    to be used only if the secondary
+                    colors render legibility issues.
+                </p><p>
+                    Dexerto also holds 5 category
+                    colors. These are used to
+                    differentiate between our
+                    Gaming #E0005E, Entertainment
+                    #038764, Esports#3D5AF1,
+                    Hardware #2C5D83 and
+                    Tv/Movies #7D1ED8 sections.
+                    These should be used primarily
+                    within these sections and used
+                    sparingly as the introduction of all
+                    of these colors within our main
+                    pallet could compete with the
+                    brand's established look and feel</p>
+            </div>
+            <div class="colors-container">
+                <div id="colors-top" style="display:flex;">
+                    <div class="color-square color-yellow color-square-full-width color-square-full-height">
+                        <div class="colors-text">
+                            <div>CORE</div>
+                            <div>#ffd310</div>
+                            <div>RGB: 255, 211, 16</div>
+                            <div>CMYK: 1, 15, 98, 0</div>
+                        </div>
+                    </div>
+                    <div class="color-square color-dark color-square-full-width color-square-full-height">
+                        <div class="colors-text text-white">
+                            <div>CORE</div>
+                            <div>#232323</div>
+                            <div>RGB: 35, 35, 35</div>
+                            <div>CMYK: 71, 65, 64, 72</div>
+                        </div>
+                    </div>
+                    <div class="colors-squares-top-right">
+                        <div style="display:flex;">
+                            <div class="color-square color-grey color-square-half-width color-square-half-height">
+                                <div class="colors-text">
+                                    <div>CORE</div>
+                                    <div>#eeeff1</div>
+                                    <div>RGB: 238, 239, 241</div>
+                                    <div>CMYK: 5, 3, 3, 0</div>
+                                </div>
+                            </div>
+                            <div class="color-square color-white color-square-half-width color-square-half-height">
+                                <div class="colors-text">
+                                    <div>TERTIARY</div>
+                                    <div>#ffffff</div>
+                                    <div>RGB: 255, 255, 255</div>
+                                    <div>CMYK: 0, 0, 0, 0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="color-square color-black color-square-full-width color-square-half-height">
+                            <div class="colors-text text-white">
+                                <div>TERTIARY</div>
+                                <div>#000000</div>
+                                <div>RGB: 35, 35, 35</div>
+                                <div>CMYK: 75, 68, 67, 90</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="colors-bottom"  style="display:flex;">
+                    <div class="color-squares-bottom-left">
+                        <div class="color-square color-blue-1 color-square-half-width color-square-half-height">
+                            <div class="colors-text">
+                                <div>TERTIARY/HARDWARE</div>
+                                <div>#2c5d83</div>
+                                <div>RGB: 44, 93, 131</div>
+                                <div>CMYK: 88, 62, 29, 10</div>
+                            </div>
+                        </div>
+                        <div class="color-square color-red-1 color-square-half-width color-square-half-height">
+                            <div class="colors-text">
+                                <div>TERTIARY</div>
+                                <div>#b5084d</div>
+                                <div>RGB: 181, 8, 77</div>
+                                <div>CMYK: 22, 100, 57, 9</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="color-squares-bottom-left-center">
+                        <div class="color-square color-blue-2 color-square-full-width color-square-half-height">
+                            <div class="colors-text">
+                                <div>TERTIARY</div>
+                                <div>#18cbe8</div>
+                                <div>RGB: 24, 203, 232</div>
+                                <div>CMYK: 90, 13, 0, 9</div>
+                            </div>
+                        </div>
+                        <div class="color-square color-red-2 color-square-full-width color-square-half-height">
+                            <div class="colors-text">
+                                <div>TERTIARY/GAMING</div>
+                                <div>#e0005e</div>
+                                <div>RGB: 224, 0, 94</div>
+                                <div>CMYK: 7, 100, 45, 0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="color-square-bottom-right-center">
+                        <div class="color-square color-blue-3 color-square-half-width color-square-half-height">
+                            <div class="colors-text">
+                                <div>TERTIARY</div>
+                                <div>#60e4f9</div>
+                                <div>RGB: 96, 228, 249</div>
+                                <div>CMYK: 48, 0, 7, 0</div>
+                            </div>
+                        </div>
+                        <div class="color-square color-red-3 color-square-half-width color-square-half-height">
+                            <div class="colors-text">
+                                <div>TERTIARY</div>
+                                <div>#f95198</div>
+                                <div>RGB: 249, 81, 152</div>
+                                <div>CMYK: 0, 83, 5, 0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colors-squares-bottom-right">
+                        <div style="display:flex;">
+                            <div class="color-square color-blue color-square-half-width color-square-half-height">
+                                <div class="colors-text text-white">
+                                    <div>ESPORTS</div>
+                                    <div>#3d5af1</div>
+                                    <div>RGB: 61, 90, 241</div>
+                                    <div>CMYK: 79, 67, 0, 0</div>
+                                </div>
+                            </div>
+                            <div class="color-square color-purple color-square-half-width color-square-half-height">
+                                <div class="colors-text text-white">
+                                    <div>TV MOVIES</div>
+                                    <div>#7d1ed8</div>
+                                    <div>RGB: 125, 30, 216</div>
+                                    <div>CMYK: 67, 83, 0, 0</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="color-square color-green color-square-full-width color-square-half-height">
+                            <div class="colors-text text-white">
+                                <div>ENTERTAINMENT</div>
+                                <div>#038764</div>
+                                <div>RGB: 3, 135, 100</div>
+                                <div>CMYK: 86, 24, 74, 8</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-swatch-download" class="download-section">
+        <div class="container download-container padding-left-50">
+            <div>
+                <h3 class="uppercase">Download</h3>
+                <div>
+                    <a href="https://drive.google.com/drive/folders/1UCe_G92hmEkvtVbUoRuhjIYOm7ll7b9C?usp=sharing" target="_blank">Color Swatch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-iconography">
+        <div class="container section-container padding-left-50" style="display:flex;">
+            <div class="container-left iconography-text">
+                <h2 class="uppercase">Iconography</h2>
+                <p>When icons are necessary it is important to keep things consistent. First off, keep the same level of stroke. We suggest 10pt and maintain that look with the set you are creating. It is understood that with slightly more complex icons, smaller or larger lines may be necessary, but just like with other elements of the brand, keep it simple, stupid (KISS). Varying rounding is also discouraged and to keep things consistent, aim around 10px rounding. Hard edges and rounded are ok to mix as you can see in the example provided.</p>
+            </div>
+            <div class="container-right iconography-info">
+                <div class="iconography-gifs" >
+                    <img class="iconography-gif" src="./images/iconography-1.gif" />
+                    <img class="iconography-gif" src="./images/iconography-2.gif" />
+                    <img class="iconography-gif" src="./images/iconography-3.gif" />
+                </div>
+                <div class="icon-examples">
+                    <img src="./images/icons.png" />
+                    <ul>
+                        <li>Icons are seldom used within Dexerto. But that doesn’t mean there isn’t a time and place.Icons can be used in array of different mediums ranging from presentations, animations and even visually describing segments of our audience or departments. Above are some examples of icons we at Dexerto suggest when curating your own. Extra points if you incorporate the Dexerto logo into an icon.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-icon-pack-download" class="download-section">
+        <div class="container download-container padding-left-50">
+            <div>
+                <h3 class="bold uppercase">Download</h3>
+                <a href="https://drive.google.com/drive/folders/1n5uW5hPTBoXToET6dN4imj456qdohyZ9?usp=sharing" target="_blank">Icon pack</a>
+            </div>
+        </div>
+    </section>
+    <section class="section-photography">
+        <div class="container section-container padding-left-50">
+            <div class="container-left photography-container">
+                <h2 class="uppercase">Photography</h2>
+                <div class="subheader-text">Stock</div>
+                <p>Dark-Mode. Gritty, techy with a touch of neon. Evade cheesy cliches, or any stock imagery that may even add subtle negative connotations towards gaming. For example, someone playing a console with a messy room full of junk food, ignoring a partner while gaming or showcasing toxic lobby behavior. We are trying to showcase the positive elements of gaming. Headshots of people playing on both console and PC are preferable but due to licensing issues, obscure hardware is common. Compositing relevant frames over screens may be needed.</p>
+                <div class="subheader-text">Editorial</div>
+                <p>Expression is key for CTA. Focusing on high-resolution images is obligatory for consistent quality within our editorial image production. Use your best judgement.</p>
+            </div>
+            <div class="container-right">
+                <div class="photography-images">
+                    <img class="photography-row-1" src="./images/photography1.png" />
+                    <img class="photography-row-1" src="./images/photography2.png" />
+                    <img class="photography-row-1" src="./images/photography3.png" />
+                    <img class="photography-row-2" src="./images/photography4.png" />
+                    <img class="photography-row-2" src="./images/photography5.png" />
+                    <img class="photography-row-2" src="./images/photography6.png" />
+                    <img class="photography-row-3" src="./images/photography7.png" />
+                    <img class="photography-row-3" src="./images/photography8.png" />
+                    <img class="photography-row-3" src="./images/photography9.png" />
+                    <img class="photography-row-4" src="./images/photography10.png" />
+                    <img class="photography-row-4" src="./images/photography11.png" />
+                    <img class="photography-row-4" src="./images/photography12.png" />
+                    <img class="photography-row-5" src="./images/photography13.png" />
+                    <img class="photography-row-5" src="./images/photography14.png" />
+                    <img class="photography-row-5" src="./images/photography15.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="download-section">
+        <div class="container padding-left-50" style="margin-top:30px;margin-bottom:30px;">
+            <h3 class="uppercase">Download</h3>
+            <a href="https://drive.google.com/drive/folders/10KVAaD4KQFnZvUYvwJBueOWDkuYEUPWI?usp=sharing" target="_blank">Image selects</a>
+        </div>
+    </section>
+    <section id="section-texture">
+        <div class="container section-container padding-left-50">
+            <div class="container-left texture-text">
+                <h2 class="uppercase">Texture</h2>
+                <p>Textures and gradients to be used when appropriate and not overpower the main composite, avatar or advertisement. Maintaining a balance of negative space with minimal colors or abstract elements as tertiary components. As to not confuse, the textures provided here would need to be edited in a way that would render them more of an accent, rather than the focal point. These textures are often largely masked away to provide negative space for photography or copy. Opacity, blending-modes and delicate application is key here.</p>
+                <div class="texture-subtext bold">*See editing example PSD’s in the downloads section for more detailed explanations.</div>
+            </div>
+            <div class="container-right texture-images-container">
+                <div class="texture-images">
+                    <img class="texture-row-1" src="./images/texture-1.png" />
+                    <img class="texture-row-1" src="./images/texture-2.png" />
+                    <img class="texture-row-1" src="./images/texture-3.png" />
+                    <img class="texture-row-2" src="./images/texture-4.png" />
+                    <img class="texture-row-2" src="./images/texture-5.png" />
+                    <img class="texture-row-2" src="./images/texture-6.png" />
+                    <img class="texture-row-3" src="./images/texture-7.png" />
+                    <img class="texture-row-3" src="./images/texture-8.png" />
+                    <img class="texture-row-3" src="./images/texture-9.png" />
+                    <img class="texture-row-4" src="./images/texture-10.png" />
+                    <img class="texture-row-4" src="./images/texture-11.png" />
+                    <img class="texture-row-4" src="./images/texture-12.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="download-section">
+        <div class="container translate-text translate-text-texture padding-left-50">
+            <h3 class="uppercase">Download</h3>
+            <a href="https://drive.google.com/drive/folders/1ITVKmaDS_FIBVVKJ3CSzj2yr7siDOGih?usp=sharing" target="_blank">Textures</a>
+        </div>
+    </section>
+    <section id="section-editing">
+        <div class="container section-container padding-left-50">
+            <div class="container-left editing-text">
+                <h2 class="uppercase">Editing</h2>
+                <p>Editing throughout our channels needs a consistent level of care. This is by no means a rule, yet an example of how we could maintain a high quality look for our editorial and marketing promotions.</p>
+                <ol>
+                    <li>Allocate high resolution image</li>
+                    <li>If necessary, crop element</li>
+                    <li>Add soft light noise layer, ranging from 15-40% transparency.</li>
+                    <li>Sharpen/color correct image. Add backdrop.</li>
+                    <li>Add effects to image with branded colors.</li>
+                    <li>Abstract and text treatment over the top.</li>
+                </ol>
+            </div>
+            <div class="container-right">
+                <div class="editing-images">
+                    <img class="editing-image editing-image-1" src="./images/editing-1-placeholder.png" />
+                    <img class="editing-image editing-image-2" src="./images/editing-2-placeholder.png" />
+                    <img class="editing-image editing-image-3" src="./images/editing-3-placeholder.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="download-section">
+        <div class="container translate-text padding-left-50" style="margin-top:30px;margin-bottom:30px;">
+            <h3 class="uppercase">Download</h3>
+            <a href="https://drive.google.com/drive/folders/1h7-zkY8_vAIVYctc4c83cyMgCBRC4whx?usp=sharing" target="_blank">Photoshop layers</a>
+        </div>
+    </section>
+    <section id="section-social">
+        <div class="container section-container padding-left-50">
+            <div class="container-left social-text">
+                <h2 class="uppercase">Social Implementation</h2>
+                <p>As we rollout expansions to the brand, we can use our social advertisements as a launchpad. With a multitude of creative options, our brand can easily adapt to revolve around the content, whilst keeping our brand in the forefront.</p>
+            </div>
+            <div class="container-right">
+                <div class="social-images">
+                    <img class="social-image social-image-1" src="./images/social-implementation-placeholder.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="download-section">
+        <div class="container translate-text padding-left-50" style="margin-top:30px;margin-bottom:30px;">
+            <h3 class="uppercase">Download</h3>
+            <a href="https://drive.google.com/drive/folders/1qKGMNupt7tSOq3POGkoFO08KkiXVmMk3?usp=sharing">Photoshop master template</a>
+        </div>
+    </section>
+    <section class="section-questions">
+        <div class="container questions-container padding-left-50">
+            <img src="./images/questions.gif" style="height:104px;" />
+            <div class="questions-text">For questions regarding the application of any Dexerto identity elements, please contact chris.raymond@dexerto.com</div>
+        </div>
+    </section>
+    <footer>
+        <div class="container footer-container padding-left-50">
+            <div class="footer-left">
+                <img src="./images/footer-logo.png"/>
+                <div>© Copyright 2023 Dexerto Ltd.</div>
+            </div>
+            <div class="footer-right">
+                <!-- <a href="#">Contact</a>
+                <a href="#">About</a>
+                <a href="#">Integrated Marketing FAQ</a>
+                <a href="#">Privacy Policy</a> -->
+            </div>
+        </div>
+    </footer>
+    <script>
+        const titleTextLines = document.querySelectorAll('.title-text')
+        titleTextLines.forEach((line, index) => line.classList.add(`title-text-${index+1}-animation`))
+
+        const valuesContainer = document.querySelector('.values-container')
+        const valuesTextLines = document.querySelectorAll('.values-text');
+        const valuesImage = document.querySelector('.values-image')
+
+        const valuesImageInitialPercent = getValuesHeightPercent(valuesImage.getBoundingClientRect().top);
+        valuesImage.style.transform = `translateY(${valuesImageInitialPercent}%)`
+        valuesImage.classList.add('visible')
+
+        const logoContainer = document.querySelector('.logo-container')
+        const logoImage = document.querySelector('.logo-image');
+
+        const sectionLogos1 = document.querySelector('.section-logos-1')
+        const fadeInLogos1 = document.querySelectorAll('.fade-in-logo-1')
+        const sectionLogos2 = document.querySelector('.section-logos-2')
+        const fadeInLogos2 = document.querySelectorAll('.fade-in-logo-2')
+
+        const downloadsSection = document.querySelector('.downloads-section')
+        const downloadsBackground = document.querySelector('.downloads-background')
+        const downloadsText = document.querySelector('.downloads-text')
+        const downloadsLinks = document.querySelector('.downloads-links')
+
+        const ipsSection = document.querySelector('#section-ips')
+        const ipLogos = document.querySelectorAll('.ip-logo')
+
+        const typographyDemosSection = document.querySelector('.typography-demos')
+        const fontDemos = document.querySelectorAll('.font-demo')
+        
+        const colorsContainer = document.querySelector('.colors-container')
+        const colorSquares = document.querySelectorAll('.color-square')
+
+        const iconographyGifContainer = document.querySelector('.iconography-gifs')
+        const iconographyGifs = document.querySelectorAll('.iconography-gif')
+
+        const photographyRow1 = document.querySelectorAll('.photography-row-1')
+        const photographyRow2 = document.querySelectorAll('.photography-row-2')
+        const photographyRow3 = document.querySelectorAll('.photography-row-3')
+        const photographyRow4 = document.querySelectorAll('.photography-row-4')
+        const photographyRow5 = document.querySelectorAll('.photography-row-5')
+
+        const textureRow1 = document.querySelectorAll('.texture-row-1')
+        const textureRow2 = document.querySelectorAll('.texture-row-2')
+        const textureRow3 = document.querySelectorAll('.texture-row-3')
+        const textureRow4 = document.querySelectorAll('.texture-row-4')
+
+        const editingImages = document.querySelectorAll('.editing-image');
+
+        const socialImage = document.querySelector('.social-image-1')
+
+        window.addEventListener('scroll', () => {
+            const valuesTop = valuesContainer.getBoundingClientRect().top
+            const valuesImageTop = valuesImage.getBoundingClientRect().top
+
+            if (valuesTop < window.innerHeight - 100) {
+                setTimeout(() => valuesTextLines[0].classList.add('values-text-animation'), 100)
+                setTimeout(() => valuesTextLines[1].classList.add('values-text-animation'), 200)
+                setTimeout(() => valuesTextLines[2].classList.add('values-text-animation'), 300)
+            }
+            if (valuesImageTop < window.innerHeight && valuesImageTop > 300) {
+                const valuesImagePercent = getValuesHeightPercent(valuesImageTop);
+                valuesImage.style.transform = `translateY(${valuesImagePercent}%)`
+            }
+            
+            const logoTop = logoContainer.getBoundingClientRect().top
+            if (logoTop < window.innerHeight - 140) {
+                logoImage.classList.add('logo-image-animation')
+            }
+
+            const sectionLogos1Top = sectionLogos1.getBoundingClientRect().top
+            if (sectionLogos1Top < window.innerHeight - 120) {
+                fadeInLogos1[0].classList.add('fade-in-logo-animation')
+                fadeInLogos1[1].classList.add('fade-in-logo-animation')
+            }
+            const sectionLogos2Top = sectionLogos2.getBoundingClientRect().top
+            if (sectionLogos2Top < window.innerHeight - 120) {
+                fadeInLogos2[0].classList.add('fade-in-logo-animation')
+                fadeInLogos2[1].classList.add('fade-in-logo-animation')
+            }
+
+            const downloadsSectionTop = downloadsSection.getBoundingClientRect().top
+            if (downloadsSectionTop < window.innerHeight - 100) {
+                downloadsBackground.classList.add('downloads-background-animation')
+                downloadsText.classList.add('downloads-text-animation')
+                downloadsLinks.classList.add('downloads-links-animation')
+            }
+
+            const ipsSectionTop = ipsSection.getBoundingClientRect().top
+            if (ipsSectionTop < window.innerHeight - 150) {
+                ipLogos.forEach((logo, index) => {
+                    setTimeout(() => logo.classList.add('ip-logo-animation'), 200 * (index + 1))
+                })
+            }
+
+            const typographyDemosTop = typographyDemosSection.getBoundingClientRect().top
+            if (typographyDemosTop < window.innerHeight - 100) {
+                fontDemos.forEach((font, index) => {
+                    setTimeout(() => font.classList.add('font-demo-animation'), 300 * (index + 1))
+                })
+            }
+
+            const colorsContainerTop = colorsContainer.getBoundingClientRect().top
+            if (colorsContainerTop < window.innerHeight - 300) {
+                colorSquares.forEach((color, index) => {
+                    setTimeout(() => color.classList.add('color-square-animation'), 100 * (index + 1))
+                })
+            }
+
+            const iconographyGifContainerTop = iconographyGifContainer.getBoundingClientRect().top
+            if (iconographyGifContainerTop < window.innerHeight - 100) {
+                setTimeout(() => iconographyGifs[0].classList.add('iconography-gif-animation'), 200)
+                setTimeout(() => iconographyGifs[1].classList.add('iconography-gif-animation'), 400)
+                setTimeout(() => iconographyGifs[2].classList.add('iconography-gif-animation'), 600)
+            }
+
+            const photographyRow1Top = photographyRow1[0].getBoundingClientRect().top
+            const photographyRow2Top = photographyRow2[0].getBoundingClientRect().top
+            const photographyRow3Top = photographyRow3[0].getBoundingClientRect().top
+            const photographyRow4Top = photographyRow4[0].getBoundingClientRect().top
+            const photographyRow5Top = photographyRow5[0].getBoundingClientRect().top
+            if (photographyRow1Top < window.innerHeight - 100) {
+                setTimeout(() => photographyRow1[0].classList.add('fade-in'), 200)
+                setTimeout(() => photographyRow1[1].classList.add('fade-in'), 400)
+                setTimeout(() => photographyRow1[2].classList.add('fade-in'), 600)
+            }
+            if (photographyRow2Top < window.innerHeight - 100) {
+                setTimeout(() => photographyRow2[0].classList.add('fade-in'), 200)
+                setTimeout(() => photographyRow2[1].classList.add('fade-in'), 400)
+                setTimeout(() => photographyRow2[2].classList.add('fade-in'), 600)
+            }
+            if (photographyRow3Top < window.innerHeight - 100) {
+                setTimeout(() => photographyRow3[0].classList.add('fade-in'), 200)
+                setTimeout(() => photographyRow3[1].classList.add('fade-in'), 400)
+                setTimeout(() => photographyRow3[2].classList.add('fade-in'), 600)
+            }
+            if (photographyRow4Top < window.innerHeight - 100) {
+                setTimeout(() => photographyRow4[0].classList.add('fade-in'), 200)
+                setTimeout(() => photographyRow4[1].classList.add('fade-in'), 400)
+                setTimeout(() => photographyRow4[2].classList.add('fade-in'), 600)
+            }
+            if (photographyRow5Top < window.innerHeight - 100) {
+                setTimeout(() => photographyRow5[0].classList.add('fade-in'), 200)
+                setTimeout(() => photographyRow5[1].classList.add('fade-in'), 400)
+                setTimeout(() => photographyRow5[2].classList.add('fade-in'), 600)
+            }
+
+            const textureRow1Top = textureRow1[0].getBoundingClientRect().top
+            const textureRow2Top = textureRow2[0].getBoundingClientRect().top
+            const textureRow3Top = textureRow3[0].getBoundingClientRect().top
+            const textureRow4Top = textureRow4[0].getBoundingClientRect().top
+            if (textureRow1Top < window.innerHeight - 100) {
+                setTimeout(() => textureRow1[0].classList.add('fade-in'), 200)
+                setTimeout(() => textureRow1[1].classList.add('fade-in'), 400)
+                setTimeout(() => textureRow1[2].classList.add('fade-in'), 600)
+            }
+            if (textureRow2Top < window.innerHeight - 100) {
+                setTimeout(() => textureRow2[0].classList.add('fade-in'), 200)
+                setTimeout(() => textureRow2[1].classList.add('fade-in'), 400)
+                setTimeout(() => textureRow2[2].classList.add('fade-in'), 600)
+            }
+            if (textureRow3Top < window.innerHeight - 100) {
+                setTimeout(() => textureRow3[0].classList.add('fade-in'), 200)
+                setTimeout(() => textureRow3[1].classList.add('fade-in'), 400)
+                setTimeout(() => textureRow3[2].classList.add('fade-in'), 600)
+            }
+            if (textureRow4Top < window.innerHeight - 100) {
+                setTimeout(() => textureRow4[0].classList.add('fade-in'), 200)
+                setTimeout(() => textureRow4[1].classList.add('fade-in'), 400)
+                setTimeout(() => textureRow4[2].classList.add('fade-in'), 600)
+            }
+
+            const editingImage1Top = editingImages[0].getBoundingClientRect().top
+            const editingImage2Top = editingImages[1].getBoundingClientRect().top
+            const editingImage3Top = editingImages[2].getBoundingClientRect().top
+            if (editingImage1Top < window.innerHeight - 100) {
+                editingImages[0].classList.add('fade-in')
+            }
+            if (editingImage2Top < window.innerHeight - 100) {
+                editingImages[1].classList.add('fade-in')
+            }
+            if (editingImage3Top < window.innerHeight - 100) {
+                editingImages[2].classList.add('fade-in')
+            }
+
+            const socialImageTop = socialImage.getBoundingClientRect().top
+            if (socialImageTop < window.innerHeight - 100) {
+                socialImage.classList.add('fade-in')
+            }
+        })
+
+        function getValuesHeightPercent(height) {
+            return Math.abs(((height - 300) / (window.innerHeight)) * 100)
+        }
+    </script>
+</body>
+
+</html>
